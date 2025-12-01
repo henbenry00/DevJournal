@@ -1,11 +1,13 @@
-name: Auto Commit Log
+name: Log Append
 
 on:
   push:
     branches: [ main ]
+    paths-ignore:
+    - README.md
 
 jobs:
-  generate:
+  append:
     runs-on: ubuntu-latest
 
     steps:
